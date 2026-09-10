@@ -1,0 +1,1328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: "Montserrat", sans-serif;
+
+    color: #5b2939;
+
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(
+            circle at 20% 10%,
+            #fff4ef 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 30%,
+            #ffe0df 0%,
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #fffaf5,
+            #ffe9e5,
+            #fff6ed
+        );
+}
+
+
+/* ========================================
+   ФОН
+======================================== */
+
+.background {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -2;
+
+    background:
+        radial-gradient(
+            circle at 10% 80%,
+            rgba(255, 159, 173, .25),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(255, 199, 130, .25),
+            transparent 30%
+        );
+
+    animation: backgroundMove 12s ease-in-out infinite alternate;
+}
+
+@keyframes backgroundMove {
+
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.08);
+    }
+}
+
+
+/* ========================================
+   ОСНОВНАЯ СТРАНИЦА
+======================================== */
+
+.page {
+
+    min-height: 100vh;
+
+    padding: 40px 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+}
+
+
+/* ========================================
+   КАРТОЧКА
+======================================== */
+
+.card {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 680px;
+
+    min-height: 900px;
+
+    padding: 80px 65px;
+
+    overflow: hidden;
+
+    border-radius: 40px;
+
+    background:
+
+        linear-gradient(
+            rgba(255,255,255,.91),
+            rgba(255,248,244,.88)
+        );
+
+    border: 2px solid rgba(214,159,94,.45);
+
+    box-shadow:
+
+        0 30px 90px rgba(130,55,75,.20),
+
+        0 0 80px rgba(255,166,163,.25),
+
+        inset 0 0 50px rgba(255,210,170,.20);
+
+    animation: cardFloat 6s ease-in-out infinite;
+}
+
+@keyframes cardFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+
+/* ========================================
+   ВНУТРЕННЯЯ РАМКА
+======================================== */
+
+.card::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 18px;
+
+    border: 1px solid rgba(201,145,87,.35);
+
+    border-radius: 30px;
+
+    pointer-events: none;
+}
+
+.card::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 28px;
+
+    border: 1px solid rgba(201,145,87,.15);
+
+    border-radius: 24px;
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   ЦВЕТЫ
+======================================== */
+
+.flower {
+
+    position: absolute;
+
+    z-index: 3;
+
+    font-size: 70px;
+
+    filter:
+        drop-shadow(0 8px 10px rgba(130,50,60,.18));
+
+    animation: flowerMove 4s ease-in-out infinite;
+}
+
+.flower-1 {
+    top: -8px;
+    left: -12px;
+    transform: rotate(-20deg);
+}
+
+.flower-2 {
+    top: 45px;
+    left: 30px;
+    font-size: 48px;
+
+    animation-delay: .7s;
+}
+
+.flower-3 {
+    top: -15px;
+    right: 8px;
+    transform: rotate(20deg);
+
+    animation-delay: 1s;
+}
+
+.flower-4 {
+    top: 60px;
+    right: 45px;
+    font-size: 45px;
+
+    animation-delay: 1.4s;
+}
+
+.flower-5 {
+    bottom: -12px;
+    left: -5px;
+    transform: rotate(20deg);
+
+    animation-delay: .4s;
+}
+
+.flower-6 {
+    bottom: -5px;
+    right: -5px;
+    transform: rotate(-20deg);
+
+    animation-delay: 1.2s;
+}
+
+@keyframes flowerMove {
+
+    0%,
+    100% {
+        margin-top: 0;
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        margin-top: -7px;
+        transform: rotate(5deg) scale(1.04);
+    }
+}
+
+
+/* ========================================
+   ЛИСТЬЯ
+======================================== */
+
+.leaf {
+
+    position: absolute;
+
+    font-size: 55px;
+
+    z-index: 2;
+
+    opacity: .7;
+
+    animation: leafMove 5s ease-in-out infinite;
+}
+
+.leaf-1 {
+    top: 85px;
+    left: -5px;
+    transform: rotate(-35deg);
+}
+
+.leaf-2 {
+    top: 90px;
+    right: 0;
+    transform: rotate(35deg);
+}
+
+.leaf-3 {
+    bottom: 70px;
+    left: 0;
+    transform: rotate(30deg);
+}
+
+.leaf-4 {
+    bottom: 75px;
+    right: 0;
+    transform: rotate(-30deg);
+}
+
+@keyframes leafMove {
+
+    0%,
+    100% {
+        transform: rotate(25deg);
+    }
+
+    50% {
+        transform: rotate(38deg) translateY(-5px);
+    }
+}
+
+
+/* ========================================
+   КОНТЕНТ
+======================================== */
+
+.content {
+
+    position: relative;
+
+    z-index: 5;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   ЗАГОЛОВОК
+======================================== */
+
+.subtitle {
+
+    font-size: 11px;
+
+    letter-spacing: 6px;
+
+    color: #c08b4f;
+
+    font-weight: 600;
+
+    margin-bottom: 12px;
+}
+
+.ornament {
+
+    font-family: "Cormorant Garamond", serif;
+
+    color: #d59a5b;
+
+    font-size: 48px;
+
+    animation: ornamentGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes ornamentGlow {
+
+    0%,
+    100% {
+        opacity: .65;
+        text-shadow: none;
+    }
+
+    50% {
+        opacity: 1;
+        text-shadow:
+            0 0 18px rgba(214,157,91,.5);
+    }
+}
+
+
+/* ========================================
+   ТЕКСТ
+======================================== */
+
+.welcome {
+
+    margin-top: 12px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 25px;
+
+    font-weight: 600;
+
+    color: #702f43;
+}
+
+.invite {
+
+    margin-top: 12px;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: #704e56;
+}
+
+
+/* ========================================
+   ИМЕНА
+======================================== */
+
+.names {
+
+    margin-top: 28px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(58px, 10vw, 88px);
+
+    line-height: .76;
+
+    font-weight: 500;
+
+    color: #702c42;
+
+    text-shadow:
+        0 5px 20px rgba(100,40,60,.1);
+}
+
+.names span {
+
+    display: block;
+
+    margin: 17px 0;
+
+    font-size: 42px;
+
+    font-style: italic;
+
+    color: #d69c59;
+}
+
+
+/* ========================================
+   ЗОЛОТАЯ ЛИНИЯ
+======================================== */
+
+.gold-line {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin: 32px auto;
+
+    max-width: 230px;
+
+    color: #d29a5b;
+}
+
+.gold-line i {
+
+    height: 1px;
+
+    flex: 1;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #d29a5b
+        );
+}
+
+.gold-line i:last-child {
+
+    background:
+        linear-gradient(
+            to left,
+            transparent,
+            #d29a5b
+        );
+}
+
+.gold-line span {
+
+    font-size: 14px;
+
+    animation: heart 1.8s infinite;
+}
+
+@keyframes heart {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.35);
+    }
+}
+
+
+/* ========================================
+   ДАТА
+======================================== */
+
+.date {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 22px;
+
+    margin-top: 25px;
+}
+
+.date-day {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 100px;
+
+    line-height: .8;
+
+    color: #bd7f45;
+
+    font-weight: 500;
+}
+
+.date-details {
+
+    text-align: left;
+
+    color: #6c3747;
+}
+
+.date-details div {
+
+    font-size: 17px;
+
+    letter-spacing: 4px;
+}
+
+.date-details strong {
+
+    display: block;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 34px;
+
+    font-weight: 500;
+}
+
+.date-details small {
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #bc8752;
+}
+
+
+/* ========================================
+   ВРЕМЯ
+======================================== */
+
+.time {
+
+    margin-top: 18px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 34px;
+
+    color: #bd7f45;
+}
+
+.time span {
+
+    position: relative;
+}
+
+.time span::before,
+.time span::after {
+
+    content: "—";
+
+    margin: 0 15px;
+
+    color: #d6a267;
+}
+
+
+/* ========================================
+   РАЗДЕЛИТЕЛЬ
+======================================== */
+
+.separator {
+
+    margin: 30px auto;
+
+    color: #d49b5a;
+
+    letter-spacing: 8px;
+
+    font-size: 10px;
+
+    animation: separatorGlow 2s infinite;
+}
+
+@keyframes separatorGlow {
+
+    0%,
+    100% {
+        opacity: .45;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+
+/* ========================================
+   МЕСТО
+======================================== */
+
+.place-icon {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 38px;
+
+    color: #d29558;
+
+    animation: flowerSpin 5s linear infinite;
+}
+
+@keyframes flowerSpin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.place h2 {
+
+    margin-top: 5px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 32px;
+
+    font-weight: 600;
+
+    color: #6d3043;
+}
+
+.place p {
+
+    margin-top: 12px;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: #73555c;
+}
+
+.restaurant {
+
+    margin-top: 7px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 25px;
+
+    color: #b87943;
+}
+
+
+/* ========================================
+   КАРТА
+======================================== */
+
+.map-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 22px;
+
+    padding: 13px 24px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    color: #fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d59b61,
+            #bd764d
+        );
+
+    box-shadow:
+        0 8px 20px rgba(184,110,70,.25);
+
+    transition: .3s;
+}
+
+.map-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(184,110,70,.35);
+}
+
+.map-btn span {
+
+    font-size: 18px;
+}
+
+
+/* ========================================
+   ФИНАЛ
+======================================== */
+
+.final-text {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 24px;
+
+    line-height: 1.5;
+
+    color: #713447;
+}
+
+.signature {
+
+    margin-top: 25px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 19px;
+
+    color: #9a6650;
+}
+
+.signature strong {
+
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 29px;
+
+    font-weight: 500;
+
+    color: #b87943;
+}
+
+
+/* ========================================
+   ОБРАТНЫЙ ОТСЧЁТ
+======================================== */
+
+.countdown-section {
+
+    margin-top: 38px;
+}
+
+.countdown-title {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 22px;
+
+    color: #713447;
+
+    margin-bottom: 17px;
+}
+
+.countdown {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 9px;
+}
+
+.counter {
+
+    width: 78px;
+
+    padding: 12px 5px;
+
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,235,225,.9),
+            rgba(255,248,244,.7)
+        );
+
+    border: 1px solid rgba(198,141,83,.25);
+
+    box-shadow:
+        0 7px 20px rgba(120,60,60,.08);
+
+    animation: counterFloat 3s ease-in-out infinite;
+}
+
+.counter:nth-child(2) {
+    animation-delay: .3s;
+}
+
+.counter:nth-child(3) {
+    animation-delay: .6s;
+}
+
+.counter:nth-child(4) {
+    animation-delay: .9s;
+}
+
+@keyframes counterFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.counter strong {
+
+    display: block;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 32px;
+
+    color: #b87543;
+}
+
+.counter span {
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    color: #947077;
+}
+
+
+/* ========================================
+   НИЖНИЙ ЦВЕТОК
+======================================== */
+
+.bottom-flower {
+
+    margin-top: 35px;
+
+    font-size: 38px;
+
+    color: #d39759;
+
+    animation:
+        bottomFlower 4s ease-in-out infinite;
+}
+
+@keyframes bottomFlower {
+
+    0%,
+    100% {
+        transform: rotate(-5deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(5deg) scale(1.12);
+    }
+}
+
+
+/* ========================================
+   КНОПКА МУЗЫКИ
+======================================== */
+
+.music-btn {
+
+    position: fixed;
+
+    right: 22px;
+
+    top: 22px;
+
+    z-index: 100;
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(189,127,69,.45);
+
+    background: rgba(255,248,244,.9);
+
+    color: #b87943;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(100,50,50,.15);
+
+    animation: musicPulse 2s infinite;
+}
+
+@keyframes musicPulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 8px 25px rgba(100,50,50,.12);
+    }
+
+    50% {
+        box-shadow:
+            0 8px 30px rgba(210,140,90,.4);
+    }
+}
+
+
+/* ========================================
+   ЛЕПЕСТКИ
+======================================== */
+
+.petal {
+
+    position: fixed;
+
+    top: -30px;
+
+    z-index: 20;
+
+    pointer-events: none;
+
+    font-size: 15px;
+
+    animation:
+        petalFall linear forwards;
+}
+
+@keyframes petalFall {
+
+    0% {
+
+        transform:
+            translateY(-20px)
+            translateX(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: .8;
+    }
+
+    50% {
+
+        transform:
+            translateY(50vh)
+            translateX(80px)
+            rotate(180deg);
+    }
+
+    100% {
+
+        transform:
+            translateY(110vh)
+            translateX(-80px)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* ========================================
+   БЛЁСТКИ
+======================================== */
+
+.sparkle {
+
+    position: fixed;
+
+    pointer-events: none;
+
+    z-index: 30;
+
+    color: #d99b5a;
+
+    animation:
+        sparkleAnimation 2s ease-in-out forwards;
+}
+
+@keyframes sparkleAnimation {
+
+    0% {
+
+        opacity: 0;
+
+        transform: scale(0) rotate(0deg);
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform: scale(1.3) rotate(90deg);
+
+        text-shadow:
+            0 0 15px #e0ad73;
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform: scale(0) rotate(180deg);
+    }
+}
+
+
+/* ========================================
+   ПОЯВЛЕНИЕ
+======================================== */
+
+.reveal {
+
+    opacity: 0;
+
+    transform:
+        translateY(25px);
+
+    animation:
+        reveal .9s ease forwards;
+}
+
+@keyframes reveal {
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* ========================================
+   МОБИЛЬНАЯ ВЕРСИЯ
+======================================== */
+
+@media (max-width: 600px) {
+
+    .page {
+
+        padding: 15px 9px;
+
+        align-items: flex-start;
+    }
+
+    .card {
+
+        min-height: auto;
+
+        padding:
+            68px
+            25px
+            55px;
+
+        border-radius: 30px;
+    }
+
+    .card::before {
+        inset: 12px;
+        border-radius: 23px;
+    }
+
+    .card::after {
+        inset: 19px;
+        border-radius: 19px;
+    }
+
+    .flower {
+
+        font-size: 48px;
+    }
+
+    .flower-2,
+    .flower-4 {
+
+        font-size: 34px;
+    }
+
+    .leaf {
+
+        font-size: 38px;
+    }
+
+    .flower-1 {
+        left: -8px;
+    }
+
+    .flower-3 {
+        right: -5px;
+    }
+
+    .flower-5 {
+        left: -8px;
+    }
+
+    .flower-6 {
+        right: -8px;
+    }
+
+    .subtitle {
+
+        font-size: 8px;
+
+        letter-spacing: 4px;
+    }
+
+    .ornament {
+
+        font-size: 40px;
+    }
+
+    .welcome {
+
+        font-size: 22px;
+    }
+
+    .invite {
+
+        font-size: 13px;
+    }
+
+    .names {
+
+        font-size: 58px;
+
+        line-height: .78;
+    }
+
+    .names span {
+
+        font-size: 34px;
+
+        margin: 14px 0;
+    }
+
+    .date {
+
+        gap: 15px;
+    }
+
+    .date-day {
+
+        font-size: 76px;
+    }
+
+    .date-details div {
+
+        font-size: 13px;
+
+        letter-spacing: 2px;
+    }
+
+    .date-details strong {
+
+        font-size: 27px;
+    }
+
+    .date-details small {
+
+        font-size: 7px;
+
+        letter-spacing: 2px;
+    }
+
+    .time {
+
+        font-size: 29px;
+    }
+
+    .time span::before,
+    .time span::after {
+
+        margin: 0 8px;
+    }
+
+    .place h2 {
+
+        font-size: 28px;
+    }
+
+    .restaurant {
+
+        font-size: 22px;
+    }
+
+    .final-text {
+
+        font-size: 21px;
+    }
+
+    .signature strong {
+
+        font-size: 25px;
+    }
+
+    .countdown {
+
+        gap: 5px;
+    }
+
+    .counter {
+
+        width: 63px;
+
+        padding: 10px 3px;
+    }
+
+    .counter strong {
+
+        font-size: 26px;
+    }
+
+    .counter span {
+
+        font-size: 7px;
+    }
+
+    .music-btn {
+
+        width: 43px;
+
+        height: 43px;
+
+        top: 12px;
+
+        right: 12px;
+
+        font-size: 18px;
+    }
+}
+
+
+/* ========================================
+   ОЧЕНЬ МАЛЕНЬКИЕ ЭКРАНЫ
+======================================== */
+
+@media (max-width: 370px) {
+
+    .card {
+
+        padding-left: 18px;
+
+        padding-right: 18px;
+    }
+
+    .names {
+
+        font-size: 51px;
+    }
+
+    .date-day {
+
+        font-size: 68px;
+    }
+
+    .counter {
+
+        width: 58px;
+    }
+
+    .counter strong {
+
+        font-size: 23px;
+    }
+}

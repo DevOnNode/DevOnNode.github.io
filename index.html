@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Константин & Гульнара</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <!-- Лепестки -->
+    <div id="petals"></div>
+
+    <!-- Блёстки -->
+    <div id="sparkles"></div>
+
+    <!-- Музыка -->
+    <audio id="music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <button class="music-btn" id="musicBtn">
+        ♪
+    </button>
+
+    <main class="page">
+
+        <div class="card">
+
+            <!-- Цветы -->
+            <div class="flower flower-1">🌸</div>
+            <div class="flower flower-2">🌺</div>
+            <div class="flower flower-3">🌷</div>
+            <div class="flower flower-4">🌹</div>
+            <div class="flower flower-5">🌸</div>
+            <div class="flower flower-6">🌺</div>
+
+            <!-- Листья -->
+            <div class="leaf leaf-1">🌿</div>
+            <div class="leaf leaf-2">🌿</div>
+            <div class="leaf leaf-3">🌿</div>
+            <div class="leaf leaf-4">🌿</div>
+
+            <div class="content">
+
+                <div class="subtitle reveal">
+                    ВАЖНЫЙ ДЕНЬ
+                </div>
+
+                <div class="ornament reveal">
+                    ❦
+                </div>
+
+                <p class="welcome reveal">
+                    Дорогие родные и близкие!
+                </p>
+
+                <p class="invite reveal">
+                    Мы приглашаем вас на торжество,<br>
+                    посвящённое нашей свадьбе
+                </p>
+
+                <h1 class="names reveal">
+                    Константин
+                    <span>&</span>
+                    Гульнара
+                </h1>
+
+                <div class="gold-line reveal">
+                    <i></i>
+                    <span>♥</span>
+                    <i></i>
+                </div>
+
+                <!-- Дата -->
+                <div class="date reveal">
+
+                    <div class="date-day">
+                        02
+                    </div>
+
+                    <div class="date-details">
+                        <div>ОКТЯБРЯ</div>
+                        <strong>2026</strong>
+                        <small>ПЯТНИЦА</small>
+                    </div>
+
+                </div>
+
+                <div class="time reveal">
+                    <span>16:30</span>
+                </div>
+
+                <div class="separator reveal">
+                    ✦ ✦ ✦
+                </div>
+
+                <!-- Место -->
+                <section class="place reveal">
+
+                    <div class="place-icon">
+                        ❀
+                    </div>
+
+                    <h2>
+                        Место торжества
+                    </h2>
+
+                    <p>
+                        г. Казань,<br>
+                        ул. Туганлык, 13, 1 этаж
+                    </p>
+
+                    <div class="restaurant">
+                        Ресторан «Золотой ключ»
+                    </div>
+
+                    <a
+                        href="https://yandex.ru/maps/?text=Казань%20ул.%20Туганлык%2013"
+                        target="_blank"
+                        class="map-btn"
+                    >
+                        <span>⌖</span>
+                        Посмотреть на карте
+                    </a>
+
+                </section>
+
+                <div class="separator reveal">
+                    ✦ ✦ ✦
+                </div>
+
+                <p class="final-text reveal">
+                    Будем счастливы разделить<br>
+                    этот прекрасный день вместе с вами!
+                </p>
+
+                <div class="signature reveal">
+                    С любовью
+                    <strong>Константин & Гульнара</strong>
+                </div>
+
+                <!-- Таймер -->
+                <section class="countdown-section reveal">
+
+                    <div class="countdown-title">
+                        До нашей свадьбы
+                    </div>
+
+                    <div class="countdown">
+
+                        <div class="counter">
+                            <strong id="days">00</strong>
+                            <span>дней</span>
+                        </div>
+
+                        <div class="counter">
+                            <strong id="hours">00</strong>
+                            <span>часов</span>
+                        </div>
+
+                        <div class="counter">
+                            <strong id="minutes">00</strong>
+                            <span>минут</span>
+                        </div>
+
+                        <div class="counter">
+                            <strong id="seconds">00</strong>
+                            <span>секунд</span>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <div class="bottom-flower reveal">
+                    ❀
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
